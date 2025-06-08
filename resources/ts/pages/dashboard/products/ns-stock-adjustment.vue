@@ -256,7 +256,7 @@ export default {
                         <td class="p-2 text-gray-600">{{ product.name }} ({{ ( product.accurate_tracking === 1 ? product.available_quantity : product.adjust_unit.quantity ) || 0 }})</td>
                         <td class="p-2 text-gray-600">
                             <select @change="recalculateProduct( product )" v-model="product.adjust_unit" class="outline-none p-2 bg-white w-full border-2 border-blue-400">
-                                <option :key="quantity.id" v-for="quantity of product.quantities" :value="quantity">{{ quantity.unit.name }}</option>
+                                <option :key="quantity.id" v-for="quantity of product.quantities" :value="weight">{{ quantity.unit.name }}</option>
                             </select>
                         </td>
                         <td class="p-2 text-gray-600">
