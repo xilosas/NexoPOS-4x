@@ -52,7 +52,7 @@
                 </div>
                 <div id="cart-table-header" class="w-full text-gray-700 font-semibold flex">
                     <div class="w-full lg:w-4/6 p-2 border border-l-0 border-t-0 border-gray-200 bg-gray-100">{{ __( 'Product' ) }}</div>
-                    <div class="hidden lg:flex lg:w-1/6 p-2 border-b border-t-0 border-gray-200 bg-gray-100">{{ __( 'Quantity' ) }}</div>
+                    <div class="hidden lg:flex lg:w-1/6 p-2 border-b border-t-0 border-gray-200 bg-gray-100">{{ __( 'Weight/KG' ) }}</div>
                     <div class="hidden lg:flex lg:w-1/6 p-2 border border-r-0 border-t-0 border-gray-200 bg-gray-100">{{ __( 'Total' ) }}</div>
                 </div>
                 <div id="cart-products-table" class="flex flex-auto flex-col overflow-auto">
@@ -97,7 +97,7 @@
                                         <a @click="openDiscountPopup( product, 'product' )" class="hover:text-blue-400 cursor-pointer outline-none border-dashed py-1 border-b border-blue-400 text-sm">{{ __( 'Discount' ) }} <span v-if="product.discount_type === 'percentage'">{{ product.discount_percentage }}%</span> : {{ product.discount | currency }}</a>
                                     </div>
                                     <div class="px-1 w-1/2 md:w-auto mb-1 lg:hidden"> 
-                                        <a @click="changeQuantity( product )" class="hover:text-blue-400 cursor-pointer outline-none border-dashed py-1 border-b border-blue-400 text-sm">{{ __( 'Quantity :' ) }} {{ product.quantity }}</a>
+                                        <a @click="changeQuantity( product )" class="hover:text-blue-400 cursor-pointer outline-none border-dashed py-1 border-b border-blue-400 text-sm">{{ __( 'Weight-KG :' ) }} {{ product.quantity }}</a>
                                     </div>
                                     <div class="px-1 w-1/2 md:w-auto mb-1 lg:hidden"> 
                                         <span class="hover:text-blue-400 cursor-pointer outline-none border-dashed py-1 border-b border-blue-400 text-sm">{{ __( 'Total :' ) }} {{ product.total_price | currency }}</span>
